@@ -77,14 +77,14 @@ class Attractor(object):
         return k4
 
 
-    def evolve(self, r0 = [0.1, 0.0, 0.0], order = 4, dt = 0.0):
+    def evolve(self, r0 = [0.1, 0.0, 0.0], order = 4):
         """Generates lists of calculates x, y, and z based on each changing step
         Calculated values depend on order/method chosen"""
         x0, y0, z0 = r0
-        if not dt: dt = self.dt
+        #if not dt: dt = self.dt
 
         if order == 1:
-              inc = self.euler(r0, dt)
+              inc = self.euler
         elif order == 2:
               inc = self.rk2
         elif order == 4:
